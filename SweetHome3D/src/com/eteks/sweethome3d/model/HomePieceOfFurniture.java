@@ -546,6 +546,11 @@ public class HomePieceOfFurniture extends HomeObject implements PieceOfFurniture
     return this.height;
   }
 
+  @Override
+  public float getVolume() {
+    return getWidth() * getHeight() * getDepth();
+  }
+
   /**
    * Sets the height of this piece of furniture. Once this piece is updated, 
    * listeners added to this piece will receive a change notification.
